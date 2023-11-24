@@ -1,5 +1,5 @@
 # Extremal Domain Translation with Neural Optimal Transport
-This is the official `Python` implementation of the [NeurIPS 2023](https://nips.cc) paper **Extremal Domain Translation with Neural Optimal Transport** (paper [page](https://arxiv.org/abs/2301.12874) on NeurIPS) by [Milena Gazdieva](https://scholar.google.com/citations?user=h52_Zx8AAAAJ&hl=en), [Alexander Korotin](https://scholar.google.ru/citations?user=1rIIvjAAAAAJ&hl=en), [Daniil Selikhanovych](https://scholar.google.com/citations?user=ZpZhN3QAAAAJ&hl=en) and [Evgeny Burnaev](https://scholar.google.ru/citations?user=pCRdcOwAAAAJ&hl=ru).
+This is the official `Python` implementation of the [NeurIPS 2023](https://nips.cc) paper **Extremal Domain Translation with Neural Optimal Transport** (paper [page](https://neurips.cc/virtual/2023/poster/70097) on NeurIPS) by [Milena Gazdieva](https://scholar.google.com/citations?user=h52_Zx8AAAAJ&hl=en), [Alexander Korotin](https://scholar.google.ru/citations?user=1rIIvjAAAAAJ&hl=en), [Daniil Selikhanovych](https://scholar.google.com/citations?user=ZpZhN3QAAAAJ&hl=en) and [Evgeny Burnaev](https://scholar.google.ru/citations?user=pCRdcOwAAAAJ&hl=ru).
 
 The repository contains reproducible `PyTorch` source code for computing **incomplete transport** (IT) **maps** in high dimensions with neural networks. The algorithm can be used to partially align distributions or to **approximate extremal** (ET) **transport maps**. Examples are provided for toy problems (2D) and for the unpaired image-to-image translation task for various pairs of datasets.
 
@@ -9,7 +9,7 @@ The repository contains reproducible `PyTorch` source code for computing **incom
 - Vector \*.svg [sources](https://github.com/iamalexkorotin/KernelNeuralOptimalTransport/blob/main/pics/KNOT_figures.svg) of the figures in the paper (use [inkscape](https://inkscape.org/) to edit); -->
 
 ## Presentations
-- [Talk](https://www.youtube.com/watch?v=2-vzNMMMWoI&t=2830s)(rewound to 47:10) by Milena Gazdieva at [Fall into ML conference](https://cs.hse.ru/ml2023/)(28 October 2023, EN)
+- [Talk](https://www.youtube.com/watch?v=2-vzNMMMWoI&t=2830s) by Milena Gazdieva at [Fall into ML conference](https://cs.hse.ru/ml2023/) (28 October 2023, EN)
 <!-- - [Short Talk]() by Milena Gazdieva at [NeurIPS 2023]()(November 2023, EN) -->
 
 ## Related repositories
@@ -27,7 +27,7 @@ The repository contains reproducible `PyTorch` source code for computing **incom
 ```
 
 ## Application to Unpaired Image-to-Image Translation Task
-The unpaired domain translation task can be posed as a classic OT problem. The corresponding OT maps (or plans) *generally* preserve certain image attributes during the translation due to the problem nature. However, OT problem formulation leads to failures in certain cases, e.g., when the source and target distributions are unbalanced. 
+The unpaired domain translation task can be posed as a classic OT problem. The corresponding OT maps (or plans) *generally* preserve certain image attributes during the translation due to the problem nature. However, OT problem formulation leads to failures in certain cases, e.g., when the attributes of objects from source and target distributions are not balanced. 
 
 Our IT algorithm could be used to resolve this issue. It searches for a transport map with the minimal transport cost (e.g., $\ell_{2}^2$) between source domain and the part ($\frac{1}{w}$) of the target domain which allows to **increase the similarity** between source and translated images. For the sufficiently large $w$, IT maps are fine approximations of ET maps which allow to achieve the **maximum similarity** between the source and translated images.
 <p align="center"><img src="pics/ust.png" width="550" /></p>
