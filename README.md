@@ -10,6 +10,7 @@ The repository contains reproducible `PyTorch` source code for computing **incom
 
 ## Presentations
 - [Talk](https://www.youtube.com/watch?v=2-vzNMMMWoI&t=2830s) by Milena Gazdieva at [Fall into ML conference](https://cs.hse.ru/ml2023/) (28 October 2023, EN)
+- [Talk](https://youtu.be/lQSfeJI5pPk?t=7584) by Milena Gazdieva at [AIRI](https://airi.net/ru/) meetup (21 December 2023, RU)
 <!-- - [Short Talk]() by Milena Gazdieva at [NeurIPS 2023]()(November 2023, EN) -->
 
 ## Related repositories
